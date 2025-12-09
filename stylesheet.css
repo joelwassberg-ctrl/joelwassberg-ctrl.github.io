@@ -1,0 +1,13 @@
+.cap{
+    position:absolute;
+    max-width: 200px;
+    animation: fall 3s linear infinite,spin 1s linear infinite;
+}
+@keyframes fall{
+    0% {top:-25vh;}
+    100%{top:100vh;}
+}
+@keyframes spin{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
