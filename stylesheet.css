@@ -52,3 +52,44 @@ body {
   opacity: 1;
   max-height: 5000px;
   }
+.inuashi{
+  font-weight: bold;
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Rainbow text: static gradient */
+.rainbow-gradient {
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Rainbow text: animated gradient */
+.rainbow-animated {
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 4s linear infinite;
+  display: inline-block;
+  font-weight: bold;
+}
+
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Per-letter spans (JS will set colors) */
+.rainbow-letters span {
+  display: inline-block;
+  will-change: color;
+}
