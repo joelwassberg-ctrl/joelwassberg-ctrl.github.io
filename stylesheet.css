@@ -1,13 +1,54 @@
+body {
+  position: relative;
+  min-height: 200vh;  
+  margin: 0;
+  overflow-x: hidden;  
+  background-image: url("deepwokenscen.webp");
+  background-size:cover;
+  background-attachment: fixed;
+  transition: background 0.5s ease;
+}
 .cap{
     position:absolute;
     max-width: 200px;
-    animation: fall 3s linear infinite,spin 1s linear infinite;
+    animation: fall 3s linear infinite;
 }
 @keyframes fall{
-    0% {top:-25vh;}
-    100%{top:100vh;}
+    0% {transform:translateY(-90vh) rotate(0deg);}
+    100%{transform:translateY(240vh) rotate(360deg);}
 }
-@keyframes spin{
-    0%{transform:rotate(0deg)}
-    100%{transform:rotate(360deg)}
+.text-mid{
+    text-align:center;
+    font-size:10vh
 }
+.red{
+    color:red;
+    font-weight:bold;
+}
+.purple{
+    color:purple;
+    font-weight:bold;
+}
+.button{
+    display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid black;             
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.5s, color 0.5s;
+}
+.button:hover {
+  background-color: black;
+  color: white;
+}
+.hidden{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s, max-height 0.5s;
+}
+.hidden.show{
+  opacity: 1;
+  max-height: 5000px;
+  }
